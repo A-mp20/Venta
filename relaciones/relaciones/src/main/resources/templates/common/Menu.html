@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Fragmento exacto del menú superior -->
+<header th:fragment="menu-superior(paginaActiva)" class="navbar">
+    <div class="logo">
+        <span class="logo-icon">🛒</span>
+        <h2>SistemaVentas</h2>
+    </div>
+    <nav class="nav-links">
+        <a href="/" th:classappend="${paginaActiva == 'home'} ? 'active' : ''">Inicio</a>
+        <a href="/clientes" th:classappend="${paginaActiva == 'clientes'} ? 'active' : ''">Clientes</a>
+        <a href="/productos" th:classappend="${paginaActiva == 'productos'} ? 'active' : ''">Productos</a>
+        <a href="/categorias" th:classappend="${paginaActiva == 'categorias'} ? 'active' : ''">Categorías</a>
+        <a href="/ventas" th:classappend="${paginaActiva == 'ventas'} ? 'active' : ''">Ventas</a>
+    </nav>
+</header>
+
+</body>
+</html>

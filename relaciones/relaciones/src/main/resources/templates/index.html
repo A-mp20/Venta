@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titulo}">Sistema de Ventas</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+<div th:replace="~{common/Menu :: menu-superior('home')}"></div>
+
+<main class="container">
+    <section class="hero-section">
+        <h1 th:text="${titulo}">Gestión de Ventas y Productos</h1>
+        <p>Bienvenido al panel principal de administración. Selecciona un módulo para gestionar la información.</p>
+    </section>
+
+    <section class="dashboard-grid">
+
+        <div class="card">
+            <div class="card-icon blue">👥</div>
+            <h3>Clientes</h3>
+            <p>Gestión de clientes, registro de información y consulta de historial.</p>
+            <a href="/clientes" class="btn btn-blue">Ver Clientes</a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon green">📦</div>
+            <h3>Productos</h3>
+            <p>Administración del catálogo, precios y gestión de inventario.</p>
+            <a href="/productos" class="btn btn-green">Ver Productos</a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon orange">🏷️</div>
+            <h3>Categorías</h3>
+            <p>Clasificación y organización de los productos del sistema.</p>
+            <a href="/categorias" class="btn btn-orange">Ver Categorías</a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon purple">💳</div>
+            <h3>Ventas</h3>
+            <p>Registro de transacciones, facturación y consulta de detalles.</p>
+            <a href="/ventas" class="btn btn-purple">Ver Ventas</a>
+        </div>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Sistema de Ventas - Universidad | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
